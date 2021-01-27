@@ -1,0 +1,82 @@
+.file {
+    display: grid;
+    @include gridBase(2);
+    align-items: center;
+    height: 774px;
+    padding-bottom: 254px;
+    position: relative;
+
+
+    &::after {
+        content: '';
+        background-image: url(../images/bg-curve-desktop.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 114px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    &__content {
+        grid-column: center-start / 3;
+        margin-bottom: 43px;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        margin: 15px 0;
+        max-width: 580px;
+        width: 100%;
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 25px;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+    }
+
+    &__input {
+        width: 320px;
+        height: 45px;
+        border-color: $very-dark-blue;
+        border-width: 1px;
+        border-radius: 5px;
+        padding: 0 20px;
+        letter-spacing: 1.1px;
+
+        &::placeholder {
+            color: $light-gray;
+        }
+    }
+
+    &__btn {
+        width: 200px;
+        height: 45px;
+        border: 0;
+        outline: 0;
+        font-family: $font-heading;
+        font-size: 1.35rem;
+        font-weight: 700;
+        background-color: $bright-blue;
+        color: rgba($light-grayish-blue, .8);
+        box-shadow: 0px 5px 15px -10px rgba($black, .5);
+        border-radius: 5px;
+    }
+
+    &__img {
+        grid-column: 3 / center-end;
+        background-image: url(../images/illustration-1.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+    }
+}

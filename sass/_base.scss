@@ -1,0 +1,88 @@
+// COLOR VARIABLES
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+
+$very-dark-blue: hsl(243, 87%, 12%);
+$desaturated-blue: hsl(238, 22%, 44%);
+$bright-blue: hsl(224, 93%, 58%);
+$moderate-cyan: hsl(170, 45%, 43%);
+$light-grayish-blue: hsl(240, 75%, 98%);
+$light-gray: hsl(0, 0%, 75%);
+
+// FONT VARIABLES
+$font-primary: 'Open Sans', sans-serif;
+$font-heading: 'Raleway', sans-serif;
+
+// Responsive Breakpoints -> 1em = 16px
+$bp-large: 69.5em; // 1112px / 16px = 69.5
+$bp-medium: 50em; // 800px / 16px = 50
+$bp-small: 39.375em; // 630px / 16px = 39.375
+
+
+:root {
+    --border-spacing: 80px;
+
+    @media only screen and (max-width: $bp-large) {
+        --border-spacing: 70px;
+        /* font-size: 109%; */
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        --border-spacing: 50px;
+        /* font-size: 104%; */
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        --border-spacing: 20px;
+        /* font-size: 99%; */
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /* (10 / 16) * 100 = 62.5 -> 1rem = 10px */
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    color: $very-dark-blue;
+
+    /* display: grid;
+    grid-template-rows: 80px 656px repeat(3, min-content);
+    grid-template-columns: [full-start] 1fr [center-start] minmax(min-content, 556px) [in-middle] minmax(min-content, 556px) [center-end] 1fr [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: [full-start] 70px [center-start] 1fr [in-middle] 1fr [center-end] 70px [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 80px 400px repeat(3, min-content);
+        grid-template-columns: [full-start] 50px [center-start] 1fr [in-middle] 1fr [center-end] 50px [full-end];
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 65px 293px repeat(3, min-content);
+        grid-template-columns: [full-start] 20px [center-start] 1fr [in-middle] 1fr [center-end] 20px [full-end];
+    } */
+}
+
+h2 {
+    font-family: $font-heading;
+    font-size: 4.05rem;
+    line-height: 1.5;
+}

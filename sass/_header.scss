@@ -1,0 +1,35 @@
+.header {
+    display: grid;
+    @include gridBase(2);
+    height: 178px;
+    align-items: center;
+
+    &__logo {
+        grid-column: center-start / 3;
+    }
+
+    &__navigation {
+        grid-column: 3 / center-end;
+    }
+
+    &__links {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__link {
+        margin-right: 58px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__anchor {
+        font-family: $font-heading;
+        text-decoration: none;
+        color: $very-dark-blue;
+        font-weight: 500;
+    }
+}

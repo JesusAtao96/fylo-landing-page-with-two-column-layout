@@ -1,0 +1,3 @@
+@mixin gridBase($count) {
+    grid-template-columns: [full-start] var(--border-spacing) [center-start] repeat($count, 1fr) [center-end] var(--border-spacing) [full-end];
+}
