@@ -1,3 +1,77 @@
 .early {
-    
+    display: grid;
+    @include gridBase(2);
+    align-items: center;
+    background-color: $desaturated-blue;
+    height: 323px;
+
+    &__content {
+        grid-column: center-start / 3;
+        color: $white;
+    }
+
+    &__title {
+        font-size: 3.2rem;
+        margin-top: 8px;
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        max-width: 545px;
+        width: 100%;
+        color: $light-grayish-blue;
+        line-height: 1.55;
+        letter-spacing: .7px;
+        font-size: 1.55rem;
+    }
+
+    &__form {
+        grid-column: 3 / center-end;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin: auto 40px auto 120px;
+    }
+
+    &__input {
+        width: 100%;
+        height: 48px;
+        border-color: transparent;
+        border-width: 1px;
+        border-radius: 3px;
+        padding: 0 20px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        font-size: 1.2rem;
+
+        &::placeholder {
+            color: $light-gray;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        width: 200px;
+        height: 48px;
+        border: 0;
+        outline: 0;
+        font-family: $font-heading;
+        font-size: 1.35rem;
+        font-weight: 700;
+        background-color: $bright-blue;
+        color: rgba($light-grayish-blue, .8);
+        box-shadow: 0px 5px 15px -10px rgba($black, .5);
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-image: linear-gradient(120deg , rgba($white, .2) 0%, rgba($white, .2) 100%),
+                                linear-gradient(120deg, $bright-blue 0%, $bright-blue 100%);
+        }
+    }
 }

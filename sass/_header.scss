@@ -4,8 +4,24 @@
     height: 178px;
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        height: 95px;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        height: 75px;
+    }
+
     &__logo {
         grid-column: center-start / 3;
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 105px;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            width: 85px;
+        }
     }
 
     &__navigation {
@@ -21,6 +37,10 @@
     &__link {
         margin-right: 58px;
 
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 15px;
+        }
+
         &:last-child {
             margin: 0;
         }
@@ -31,5 +51,13 @@
         text-decoration: none;
         color: $very-dark-blue;
         font-weight: 500;
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.4rem;
+        }
+    
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.2rem;
+        }
     }
 }

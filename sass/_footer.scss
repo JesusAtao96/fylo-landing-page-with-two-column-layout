@@ -1,3 +1,114 @@
 .footer {
-    
+    display: grid;
+    @include gridBase(4);
+    grid-template-rows: repeat(2, min-content);
+    row-gap: 25px;
+    align-content: center;
+    background-color: $very-dark-blue;
+    height: 390px;
+
+    &__logo {
+        grid-column: center-start / 3;
+        grid-row: 1 / 2;
+        width: 175px;
+        margin-top: 35px;
+    }
+
+    &__contacts {
+        grid-column: center-start / 3;
+        grid-row: 2 / 3;
+        color: $light-grayish-blue;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+
+    &__icon {
+        margin-right: 18px;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    &__links--1 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
+
+    &__links--2 {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+        margin-left: 23%;
+    }
+
+    &__link {
+        list-style-type: none;
+    }
+
+    &__anchor {
+        color: $light-grayish-blue;
+        text-decoration: none;
+
+        &:hover {
+            color: $bright-blue-active;
+        }
+    }
+
+    &__socials {
+        grid-column: 5 / center-end;
+        grid-row: 2 / 3;
+
+        display: flex;
+        margin-left: 20px;
+    }
+
+    &__social {
+        width: 32px;
+        height: 32px;
+        border: 1px solid $light-grayish-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin-right: 13px;
+        cursor: pointer;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            border-color: $bright-blue-active;
+
+            path {
+                fill: $bright-blue-active;
+                stroke: $bright-blue-active;
+            }
+        }
+    }
+
+    &__social:last-child {
+        margin-right: 0;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover {
+            path {
+                fill: transparent;
+            }
+        }
+    }
 }
