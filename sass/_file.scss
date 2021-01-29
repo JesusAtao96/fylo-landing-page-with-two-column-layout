@@ -11,7 +11,7 @@
     }
 
     @media only screen and (max-width: $bp-small) {
-        height: auto;
+        height: 850px;
     }
 
     &::after {
@@ -25,6 +25,14 @@
         bottom: 0;
         background-position: center;
         background-size: cover;
+
+        @media only screen and (max-width: $bp-medium) {
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            background-image: url(../images/bg-curve-mobile.svg);
+            height: 80px;
+        }
     }
 
     &__content {
@@ -35,6 +43,10 @@
             grid-column: center-start / center-end;
             grid-row: 2 / 3;
             text-align: center;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-bottom: 0;
         }
     }
 
@@ -77,9 +89,14 @@
         flex-direction: column;
         margin-right: 15px;
 
+        @media only screen and (max-width: $bp-medium) {
+            width: 80%;
+            margin: auto;
+        }
+
         @media only screen and (max-width: $bp-small) {
-            margin-right: 0;
             width: 100%;
+            margin: 15px auto auto auto;
         }
     }
 
@@ -92,12 +109,17 @@
         padding: 0 20px;
         letter-spacing: 1.1px;
 
-        @media only screen and (max-width: $bp-large) {
-            margin-bottom: 15px;
+        &--error {
+            border: 1px solid $error-color;
         }
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium) {
             width: 100%;
+        }
+
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 10px;
         }
 
         &::placeholder {
@@ -106,6 +128,18 @@
 
         &:focus {
             outline: none;
+        }
+    }
+
+    &__error {
+        color: $error-color;
+        margin-top: 5px;
+        font-size: 1.4rem;
+        display: none;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin-top: 10px;
+            text-align: left;
         }
     }
 
@@ -123,9 +157,18 @@
         border-radius: 5px;
         cursor: pointer;
 
+        @media only screen and (max-width: $bp-large) {
+            margin-top: 15px;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            width: 80%;
+            margin: 15px auto auto auto;
+        }
+
         @media only screen and (max-width: $bp-small) {
             width: 100%;
-            margin: auto;
+            margin: 15px auto auto auto;
         }
 
         &:hover {

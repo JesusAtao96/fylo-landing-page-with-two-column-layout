@@ -7,8 +7,9 @@ $desaturated-blue: hsl(238, 22%, 44%);
 $bright-blue: hsl(224, 93%, 58%);
 $bright-blue-active: hsl(224, 93%, 66%);
 $moderate-cyan: hsl(170, 45%, 43%);
-$light-grayish-blue: hsl(240, 75%, 98%);
+$light-grayish-blue: #f8f8fe;
 $light-gray: hsl(0, 0%, 75%);
+$error-color: hsl(0, 60%, 52%);
 
 // FONT VARIABLES
 $font-primary: 'Open Sans', sans-serif;
@@ -18,7 +19,6 @@ $font-heading: 'Raleway', sans-serif;
 $bp-large: 69.5em; // 1112px / 16px = 69.5
 $bp-medium: 50em; // 800px / 16px = 50
 $bp-small: 40.9375em; // 655 px / 16px = 40.9375
-
 
 :root {
     --border-spacing: 80px;

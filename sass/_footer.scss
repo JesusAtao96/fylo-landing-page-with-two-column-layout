@@ -7,6 +7,11 @@
     background-color: $very-dark-blue;
     height: 390px;
 
+    @media only screen and (max-width: $bp-medium) {
+        height: auto;
+        padding: 40px 0;
+    }
+
     &__logo {
         grid-column: center-start / 3;
         grid-row: 1 / 2;
@@ -20,12 +25,21 @@
         color: $light-grayish-blue;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: center-start / center-end;
+            grid-row: 2 / 3;
+        }
     }
 
     &__contact {
         display: flex;
         align-items: center;
         margin-bottom: 18px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
     }
 
     &__icon {
@@ -42,12 +56,25 @@
         grid-column: 3 / 4;
         grid-row: 2 / 3;
         justify-self: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: center-start / center-end;
+            grid-row: 3 / 4;
+            justify-self: start;
+            margin-bottom: 25px;
+        }
     }
 
     &__links--2 {
         grid-column: 4 / 5;
         grid-row: 2 / 3;
         margin-left: 23%;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: center-start / center-end;
+            grid-row: 4 / 5;
+            margin-left: 0;
+        }
     }
 
     &__link {
@@ -57,6 +84,10 @@
     &__anchor {
         color: $light-grayish-blue;
         text-decoration: none;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.5rem;
+        }
 
         &:hover {
             color: $bright-blue-active;
@@ -69,6 +100,13 @@
 
         display: flex;
         margin-left: 20px;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: center-start / center-end;
+            grid-row: 5 / 6;
+            margin-left: 0;
+            justify-self: center;
+        }
     }
 
     &__social {

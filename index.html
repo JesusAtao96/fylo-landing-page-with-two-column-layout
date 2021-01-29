@@ -44,10 +44,10 @@
           family, and co-workers.
         </p>
 
-        <form class="file__form">
+        <form id="form-1" class="file__form">
           <div class="file__group">
             <input type="text" class="file__input" placeholder="Enter your email...">
-            <!-- <span class="file__error">Please check your email</span> -->
+            <span class="file__error">Please check your email</span>
           </div>
           <button class="file__btn">Get Started</button>
         </form>
@@ -111,8 +111,11 @@
           If you have any questions, our support team would be happy to help you.
         </p>
       </div>
-      <form class="early__form">
-        <input type="text" class="early__input" placeholder="email@example.com">
+      <form id="form-2" class="early__form">
+        <div class="early__group">
+          <input type="text" class="early__input" placeholder="email@example.com">
+          <span class="early__error">Please check your email</span>
+        </div>
         <button class="early__btn">Get Started For Free</button>
       </form>
     </section>
@@ -188,6 +191,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
